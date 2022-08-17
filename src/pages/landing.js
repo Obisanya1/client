@@ -1,13 +1,14 @@
 import React from "react";
-import Logo from "./../assets/images/logo.svg";
+import Logo from "./../components/Logo";
 import main from "./../assets/images/main.svg";
 import Wrapper from "./../assets/wrappers/LandingPage";
+import { Link } from "react-router-dom";
 
 function Landing() {
   return (
     <Wrapper>
       <nav>
-        <img src={Logo} alt="Jobify" className="logo"></img>
+        <Logo />
       </nav>
       <div className="container page">
         <div className="info">
@@ -20,7 +21,9 @@ function Landing() {
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book.
           </p>
-          <button className="btn btn-hero">Login/Register</button>
+          <Link to="/register" className="btn btn-hero">
+            Login/Register
+          </Link>
         </div>
         <div>
           <img src={main} alt="job hunt" className="img main-img"></img>
